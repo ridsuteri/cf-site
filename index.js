@@ -6,7 +6,7 @@ const passport = require('./config/passport');
 const Post = require('./models/Post');
 
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 
 app.use(cookieSession({
