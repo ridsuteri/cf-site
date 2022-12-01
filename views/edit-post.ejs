@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs') %>
+
+    <div class="container-fluid">
+        <form action="/updateStory/<%=post._id%>" method="post">
+            <div class="form-outline">
+                <input value="<%=post.title%>" type="text" id="typeURL" class="form-control" name="title" required />
+                <label class="form-label" for="typeURL">Title</label>
+            </div>
+
+            <div class="form-outline">
+                <textarea class="form-control" id="textAreaExample" rows="4" name="message"
+                    required><%=post.description%></textarea>
+                <label class="form-label" for="textAreaExample">Message</label>
+            </div>
+            <!-- <button type="submit"> Submit </button> -->
+            <button type="submit" class="btn btn-primary btn-lg">Publish</button>
+        </form>
+    </div>
+
+
+
+    <%- include('partials/footer.ejs') %>

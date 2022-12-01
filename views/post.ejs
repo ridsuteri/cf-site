@@ -1,0 +1,29 @@
+<%- include('partials/header.ejs') %>
+
+    <!-- <h1 style="text-align: center;"> Hello Welcome to our Confession Page! </h1> -->
+
+    <div class="container">
+        <div class="row">
+            <h1>
+                <%= post.title %>
+            </h1>
+            <p>
+                <%= post.description %>
+            </p>
+            <hr><br>
+            <h6>
+                <%= post.author%> @ <%= post.date%>
+            </h6>
+            <% if (user.email==post.author) { %>
+                <a href="/update/<%= post._id%>">
+                    <p>Edit</p>
+                </a>
+                <a href="/delete/<%= post._id%>">
+                    <p>Delete</p>
+                </a>
+            <%} %>
+        </div>
+    </div>
+
+
+    <%- include('partials/footer.ejs') %>

@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+
+    <div class="container-fluid">
+        <form action="/addStories" method="post">
+            <div class="form-outline">
+                <input type="text" id="typeURL" class="form-control" name="title" required />
+                <label class="form-label" for="typeURL">Title</label>
+            </div>
+
+            <div class="form-outline">
+                <textarea class="form-control" id="textAreaExample" rows="4" name="description" required></textarea>
+                <label class="form-label" for="textAreaExample">Content</label>
+            </div>
+            <!-- <button type="submit"> Submit </button> -->
+            <button type="submit" class="btn btn-primary btn-lg">Publish</button>
+        </form>
+    </div>
+
+<%- include('partials/footer.ejs') %>
