@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieSession = require('cookie-session');
-
+require('dotenv').config()
 const passport = require('./config/passport');
 const Post = require('./models/Post');
 
